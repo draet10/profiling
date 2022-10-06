@@ -1,0 +1,10 @@
+clang -o test.i -E test.c
+
+clang -o test.s -S test.i
+
+clang -o test.o -c test.s 
+
+clang -o test -g test.o
+
+objdump -S test > test-objdump 
+
