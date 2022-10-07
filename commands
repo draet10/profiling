@@ -2,3 +2,10 @@ sudo apt-get install linux-tools-common linux-tools-generic linux-tools-5.15.0-4
 
 sudo apt install gcc
 
+sudo perf stat -e cpu-clock,faults,cpu-cycles,instructions,dTLB
+
+sudo perf stat -e cpu-clock,faults,cpu-cycles,instructions,dTLB-load-misses,dTLB-store-misses,L1-dcache-loads,L1-dcache-load-misses,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,LLC-store-misses ./mmnaive
+
+run perf stat -e cpu-clock,faults,cycles,instructions,dTLB-load-misses,dTLB-store-misses,L1-dcache-loads,L1-dcache-load-misses,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,LLC-store-misses ./mmnaive
+
+run perf stat -e cpu-clock,faults,cycles,instructions,dTLB-load-misses,dTLB-store-misses,L1-dcache-loads,L1-dcache-load-misses,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,LLC-store-misses sleep 2
