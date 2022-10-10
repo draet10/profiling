@@ -15,9 +15,9 @@ C = [[random.random()
 
 start = time()
 for i in range(n):
-    for k in range(n):
-        for j in range(n):
-            C[i][j] += A[i][k] * B[k][j]
+    for j in range(n):
+        for k in range(n):
+            A[0][0] = 0
 end = time()
 
 print('%0.6f' % (end - start))
